@@ -6,12 +6,17 @@ import Nominations from './components/Nominations'
 
 class App extends React.Component {
   state = {
-    searchInput: ""
+    searchInput: "",
+    results: {}
   }
 
   updateSearch = input => {
-    this.setState({searchInput: input})
+    this.setState({searchInput: input.split(' ').join('+')})
+    fetch(`http://www.omdbapi.com/?t=${this.state.searchInput}&apikey=e26e6632`)
+        .then(resp => resp.json())
+        .then(results => this.setState({results: results}))
   }
+
   render() {
     return (
       <div className="App">
@@ -26,4 +31,4 @@ class App extends React.Component {
 
 export default App;
 
-//http://www.omdbapi.com/?t=blade+runner&apikey=e26e6632
+
