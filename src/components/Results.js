@@ -5,7 +5,10 @@ class Results extends React.Component {
     render(){
         return(
             <div>
-                This is my results component
+                Results for "{this.props.searchInput}"
+                <ul>
+                    {this.props.results ? <li>{this.props.results["Title"]} ({this.props.results["Year"]}) <button>Nominate</button></li> : null}
+                </ul>
             </div>
         )
     }
