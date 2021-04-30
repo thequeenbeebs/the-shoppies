@@ -22,13 +22,17 @@ class App extends React.Component {
     this.setState({nominations: [...this.state.nominations, movie]})
   }
 
+  removeMovie = movie => {
+    this.setState({nominations: this.state.nominations.filter(nom => nom["imdbID"] !== movie["imdbID"])})
+  }
+
   render() {
     return (
       <div className="App">
         <h1>The Shoppies</h1>
         <Search updateSearch={this.updateSearch}/><br/>
         {this.state.searchInput ? <Results searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie}/> : null}<br/>
-        <Nominations nominations={this.state.nominations}/>
+        <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
       </div>
     );
   }

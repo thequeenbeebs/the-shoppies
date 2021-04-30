@@ -6,7 +6,7 @@ class Nominations extends React.Component {
             <div>
                 Nominations
                 <ul>
-                    {this.props.nominations.map(movie => <li>{movie["Title"]} ({movie["Year"]}) <button>Remove</button></li>)}
+                    {this.props.nominations.map(movie => <li>{movie["Title"]} ({movie["Year"]}) <button onClick={() => this.props.removeMovie(movie)}>Remove</button></li>)}
                 </ul>
             </div>
         )
