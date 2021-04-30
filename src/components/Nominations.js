@@ -4,7 +4,10 @@ class Nominations extends React.Component {
     render(){
         return(
             <div>
-                This is my nominations component
+                Nominations
+                <ul>
+                    {this.props.nominations.map(movie => <li>{movie["Title"]} ({movie["Year"]}) <button>Remove</button></li>)}
+                </ul>
             </div>
         )
     }

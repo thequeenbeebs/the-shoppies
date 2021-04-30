@@ -7,7 +7,7 @@ class Results extends React.Component {
             <div>
                 Results for "{this.props.searchInput}"
                 <ul>
-                    {this.props.results ? <li>{this.props.results["Title"]} ({this.props.results["Year"]}) <button>Nominate</button></li> : null}
+                    {this.props.results ? <li>{this.props.results["Title"]} ({this.props.results["Year"]}) <button onClick={() => this.props.nominateMovie(this.props.results)}>Nominate</button></li> : null}
                 </ul>
             </div>
         )

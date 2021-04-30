@@ -7,7 +7,8 @@ import Nominations from './components/Nominations'
 class App extends React.Component {
   state = {
     searchInput: "",
-    results: []
+    results: [],
+    nominations: []
   }
 
   updateSearch = input => {
@@ -17,13 +18,17 @@ class App extends React.Component {
         .then(results => this.setState({results: results}))
   }
 
+  nominateMovie = movie => {
+    this.setState({nominations: [...this.state.nominations, movie]})
+  }
+
   render() {
     return (
       <div className="App">
         <h1>The Shoppies</h1>
         <Search updateSearch={this.updateSearch}/><br/>
-        {this.state.searchInput ? <Results searchInput={this.state.searchInput} results={this.state.results}/> : null}<br/>
-        <Nominations />
+        {this.state.searchInput ? <Results searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie}/> : null}<br/>
+        <Nominations nominations={this.state.nominations}/>
       </div>
     );
   }
