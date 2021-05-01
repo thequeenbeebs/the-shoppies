@@ -32,7 +32,7 @@ class App extends React.Component {
       <div className="App">
         {this.state.nominations.length === 5 ? <Banner /> : null}
         <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png"></img>
-        <h1>The Shoppies</h1>
+        <h1>the shoppies</h1>
         <Search updateSearch={this.updateSearch}/><br/>
         {this.state.results["Title"] ? <Results searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null}<br/>
         <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>

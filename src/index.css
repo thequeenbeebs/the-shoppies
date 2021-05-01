@@ -1,4 +1,29 @@
+@import url(//db.onlinewebfonts.com/c/1fa6f8f49a331cc09801c741de42ab84?family=Shopify+Sans+Black);
+
+@font-face {
+  font-family: "Shopify Sans Black"; 
+  src: url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.eot"); 
+  src: url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.eot?#iefix") 
+  format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.woff2") 
+  format("woff2"), 
+  url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.woff") 
+  format("woff"), 
+  url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.ttf") 
+  format("truetype"), 
+  url("//db.onlinewebfonts.com/t/1fa6f8f49a331cc09801c741de42ab84.svg#Shopify Sans Black") 
+  format("svg"); 
+}
+
 body {
+  font-family: "Shopify Sans Black";
+}
+
+h1 {
+  font-style: italic;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +35,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
