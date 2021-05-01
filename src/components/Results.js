@@ -5,9 +5,9 @@ class Results extends React.Component {
     render(){
         return(
             <div>
-                Results for "{this.props.searchInput}"
+                Results for "{this.props.searchInput.split('+').join(' ')}"
                 <ul>
-                    {this.props.results ? <li>{this.props.results["Title"]} ({this.props.results["Year"]}) <button onClick={() => this.props.nominateMovie(this.props.results)}>Nominate</button></li> : null}
+                    <li>{this.props.results["Title"]} ({this.props.results["Year"]}) <button onClick={() => this.props.nominateMovie(this.props.results)}>Nominate</button></li>
                 </ul>
             </div>
         )
