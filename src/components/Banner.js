@@ -2,7 +2,7 @@ import React from 'react';
 
 function Banner(){
     return(
-        <div>This is My Banner Component</div>
+        <div>Thank you for participating in The Shoppies!</div>
     )
 }
 

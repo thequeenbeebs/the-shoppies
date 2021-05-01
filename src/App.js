@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Banner />
+        {this.state.nominations.length === 5 ? <Banner /> : null}
         <h1>The Shoppies</h1>
         <Search updateSearch={this.updateSearch}/><br/>
         {this.state.results["Title"] ? <Results searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null}<br/>
