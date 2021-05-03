@@ -15,7 +15,7 @@ class App extends React.Component {
 
   updateSearch = input => {
     this.setState({searchInput: input.split(' ').join('+')})
-    fetch(`http://www.omdbapi.com/?t=${this.state.searchInput}&apikey=e26e6632&type=movie&page=1`)
+    fetch(`http://www.omdbapi.com/?s=${this.state.searchInput}&apikey=e26e6632&type=movie&page=1`)
         .then(resp => resp.json())
         .then(results => this.setState({results: results}))
   }
@@ -38,7 +38,10 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
         <Search updateSearch={this.updateSearch}/><br/>
-        {this.state.results["Title"] ? <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null}<br/>
+        <div>
+          <h2>Results</h2>
+          {this.state.results["Search"] ? <ResultsContainer searchInput={this.state.searchInput} results={this.state.results["Search"]} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null} <br/>
+        </div>
         <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
       </div>
     );
