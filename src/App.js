@@ -1,7 +1,7 @@
 import React from 'react';
 // import './App.css';
 import Search from './components/Search'
-import Results from './components/Results'
+import ResultsContainer from './components/ResultsContainer'
 import Nominations from './components/Nominations'
 import Banner from './components/Banner'
 
@@ -36,7 +36,7 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
         <Search updateSearch={this.updateSearch}/><br/>
-        {this.state.results["Title"] ? <Results searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null}<br/>
+        {this.state.results["Title"] ? <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null}<br/>
         <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
       </div>
     );
