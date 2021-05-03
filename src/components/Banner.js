@@ -2,7 +2,9 @@ import React from 'react';
 
 function Banner(){
     return(
-        <div>Thank you for participating in The Shoppies!</div>
+        <div className="banner">
+            Thank you for participating in The Shoppies!
+        </div>
     )
 }
 

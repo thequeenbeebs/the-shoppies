@@ -4,6 +4,7 @@ import Search from './components/Search'
 import ResultsContainer from './components/ResultsContainer'
 import Nominations from './components/Nominations'
 import Banner from './components/Banner'
+import Confetti from 'react-dom-confetti'
 
 class App extends React.Component {
   state = {
@@ -30,6 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Confetti active={this.state.nominations.length === 5 ? "true" : null} />
         {this.state.nominations.length === 5 ? <Banner /> : null}
         <div className="title">
           <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="shopify icon"></img>
