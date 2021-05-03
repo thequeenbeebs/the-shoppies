@@ -8,7 +8,7 @@ class ResultsContainer extends React.Component {
             <div>
                 <h2>Results for "{this.props.searchInput.split('+').join(' ')}"</h2>
                 <ul>
-                    {this.props.results.map(result => <Result nominateMovie={this.props.nominateMovie} results={result} nominations={this.props.nominations}/>)} 
+                    {this.props.results["Search"] ? this.props.results["Search"].map(result => <Result nominateMovie={this.props.nominateMovie} results={result} nominations={this.props.nominations}/>) : null} 
                 </ul>
             </div>
         )

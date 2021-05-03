@@ -38,10 +38,7 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
         <Search updateSearch={this.updateSearch}/><br/>
-        <div>
-          <h2>Results</h2>
-          {this.state.results["Search"] ? <ResultsContainer searchInput={this.state.searchInput} results={this.state.results["Search"]} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> : null} <br/>
-        </div>
+        <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
         <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
       </div>
     );
