@@ -28,11 +28,14 @@ h1 {
 
 img {
   max-height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .banner {
   width: 100%;
   height: 100%;
+  margin: 25px;
 }
 
 /* button {
