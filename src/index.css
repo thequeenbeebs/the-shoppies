@@ -17,6 +17,9 @@
 
 body {
   font-family: "Shopify Sans Black";
+  background-color: #008060;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -46,6 +49,25 @@ img {
 } */
 
 .title {
+  display: flex;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.search {
+  background-color: white;
+  padding: 10px;
+  margin: 25px;
+}
+
+.container {
+  background-color: white;
+  width: 45%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.flex {
   display: flex;
 }
 

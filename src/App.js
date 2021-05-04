@@ -38,8 +38,10 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
         <Search updateSearch={this.updateSearch}/><br/>
-        <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
-        <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
+        <div className="flex">
+          <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
+          <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
+        </div>
       </div>
     );
   }
