@@ -13,15 +13,24 @@ class App extends React.Component {
     nominations: []
   }
 
+  componentDidMount () {
+    let noms = localStorage.getItem("nominations")
+    if(noms) {
+      this.setState({nominations: JSON.parse(noms)})
+    }
+  }
+  
+
   updateSearch = input => {
     this.setState({searchInput: input.split(' ').join('+')})
-    fetch(`http://www.omdbapi.com/?s=${input}&apikey=e26e6632&type=movie&page=1`)
+    fetch(`http://www.omdbapi.com/?s=${input.split(' ').join('+')}&apikey=e26e6632&type=movie`)
         .then(resp => resp.json())
         .then(results => this.setState({results: results}))
   }
 
   nominateMovie = movie => {
     this.setState({nominations: [...this.state.nominations, movie]})
+    localStorage.setItem("nominations", JSON.stringify([...this.state.nominations, movie]))
   }
 
   removeMovie = movie => {
