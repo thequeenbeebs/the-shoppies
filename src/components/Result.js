@@ -10,7 +10,7 @@ class Result extends React.Component {
                     variant="contained"
                     size="small"
                     onClick={() => this.props.nominateMovie(this.props.results)}
-                    disabled={this.props.nominations.some(nom => nom["imdbID"] === this.props.results["imdbID"]) ? "true" : ""}
+                    disabled={this.props.nominations.some(nom => nom["imdbID"] === this.props.results["imdbID"]) ? true : false}
                     >Nominate</Button>
             </li>
         )

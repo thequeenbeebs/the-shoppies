@@ -4,7 +4,7 @@ import Search from './components/Search'
 import ResultsContainer from './components/ResultsContainer'
 import Nominations from './components/Nominations'
 import Banner from './components/Banner'
-import Confetti from 'react-dom-confetti'
+// import Confetti from 'react-dom-confetti'
 
 class App extends React.Component {
   state = {
@@ -15,7 +15,7 @@ class App extends React.Component {
 
   updateSearch = input => {
     this.setState({searchInput: input.split(' ').join('+')})
-    fetch(`http://www.omdbapi.com/?s=${this.state.searchInput}&apikey=e26e6632&type=movie&page=1`)
+    fetch(`http://www.omdbapi.com/?s=${input}&apikey=e26e6632&type=movie&page=1`)
         .then(resp => resp.json())
         .then(results => this.setState({results: results}))
   }
