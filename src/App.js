@@ -35,6 +35,7 @@ class App extends React.Component {
 
   removeMovie = movie => {
     this.setState({nominations: this.state.nominations.filter(nom => nom["imdbID"] !== movie["imdbID"])})
+    localStorage.setItem("nominations", JSON.stringify(this.state.nominations.filter(nom => nom["imdbID"] !== movie["imdbID"])))
   }
 
   render() {
