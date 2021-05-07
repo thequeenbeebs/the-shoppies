@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Dialog } from '@material-ui/core';
-import Confetti from 'react-dom-confetti'
+import Confetti from 'react-confetti'
 
 function Banner(){
     const [open, setOpen] = useState(true)
@@ -10,8 +10,10 @@ function Banner(){
       }
 
     return(
+        
         <Dialog open={open} onClick={handleClose}> 
-            <h2 className="banner"><Confetti active="true"/>Thank you for participating in The Shoppies!</h2>
+            <Confetti />
+            <h2 className="banner">Thank you for participating in The Shoppies!</h2>
         </Dialog>
     )
 }
