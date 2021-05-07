@@ -23,6 +23,7 @@ class App extends React.Component {
 
   updateSearch = input => {
     this.setState({searchInput: input.split(' ').join('+')})
+    console.log(`http://www.omdbapi.com/?s=${input.split(' ').join('+')}&apikey=e26e6632&type=movie`)
     fetch(`http://www.omdbapi.com/?s=${input.split(' ').join('+')}&apikey=e26e6632&type=movie`)
         // .then(resp => resp.json())
         .then(console.log)
