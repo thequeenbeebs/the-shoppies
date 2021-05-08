@@ -46,11 +46,20 @@ class App extends React.Component {
           <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="shopify icon"></img>
           <h1>the shoppies</h1>
         </div>
-        <Search updateSearch={this.updateSearch}/><br/>
-        <div className="flex">
-          <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
-          <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
+
+        <div class="container-fluid">    
+          <div class="row content">
+            <div class="col-sm-8 text-left"> 
+              <Search updateSearch={this.updateSearch}/><br/>
+              <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
+            </div>
+            <div class="col-sm-4 sidenav">
+              <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
+            </div>
+          </div>
         </div>
+    
+        
       </div>
     );
   }

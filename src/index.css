@@ -60,14 +60,14 @@ img {
 .search {
   background-color: #fbf7ed;
   padding: 10px;
-  margin: 25px;
+  /* margin: 25px; */
 }
 
 .container {
   background-color: #fbf7ed;
-  width: 45%;
+  /* width: 45%;
   padding: 10px;
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 
 .flex {
