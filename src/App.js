@@ -47,13 +47,13 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
 
-        <div class="container-fluid">    
-          <div class="row content">
-            <div class="col-sm-8 text-left"> 
+        <div className="container-fluid">    
+          <div className="row content">
+            <div className="col-sm-8 text-left"> 
               <Search updateSearch={this.updateSearch}/><br/>
               <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
             </div>
-            <div class="col-sm-4 sidenav">
+            <div className="col-sm-4 sidenav">
               <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
             </div>
           </div>
