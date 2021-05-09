@@ -16,4 +16,3 @@
 * Testing
 * Implementing Hooks in all components 
 * Loading spinner and other animations
-* More styling
