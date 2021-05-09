@@ -4,7 +4,7 @@
 
 ## Technologies
 * React.js | HTML | CSS
-* Styling: Material-UI
+* Styling: React-Bootstrap
 * Confetti: react-confetti
 
 ## Set Up

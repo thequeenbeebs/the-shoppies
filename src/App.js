@@ -45,12 +45,12 @@ class App extends React.Component {
       <div className="App">
         {this.state.nominations.length === 5 ? <Banner /> : null}
         <div className="title">
-          <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="shopify icon"></img>
+          <img id="logo" src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="shopify icon"></img>
           <h1>the shoppies</h1>
         </div>
 
         <Container fluid>    
-          <Row content>
+          <Row>
             <Col sm={8}>
               <Search updateSearch={this.updateSearch}/><br/>
               <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
