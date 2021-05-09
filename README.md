@@ -2,6 +2,9 @@
 > This project was made in conjunction with my application for a Frontend Developer Internship with Shopify for Fall 2021. It is an application that uses the React.js library and connects to the OMDB API to allow a user to search for movies and add them to a nomination list (along with removing them). After a user nominates 5 movies, they get a fun surprise.
 >
 
+## Demo
+https://bb-presents-the-shoppies.herokuapp.com/
+
 ## Technologies
 * React.js | HTML | CSS
 * Styling: React-Bootstrap
