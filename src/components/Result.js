@@ -17,7 +17,7 @@ function Result(props){
   
 
         return (
-            <OverlayTrigger trigger={["hover", "focus"]} placement="right" overlay={popover}>
+            <OverlayTrigger trigger={["hover", "focus"]} placement="bottom" overlay={popover}>
             <li>{props.results["Title"]} ({props.results["Year"]}) 
                 <Button 
                     variant="secondary" size="sm"
