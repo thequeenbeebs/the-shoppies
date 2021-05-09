@@ -15,4 +15,5 @@
 ## Continuing Goals
 * Testing
 * Implementing Hooks in all components 
-* More animations
+* Loading spinner and other animations
+* More styling

@@ -1,9 +1,11 @@
 import React from 'react';
-// import './App.css';
 import Search from './components/Search'
 import ResultsContainer from './components/ResultsContainer'
 import Nominations from './components/Nominations'
 import Banner from './components/Banner'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 
 
 class App extends React.Component {
@@ -47,17 +49,17 @@ class App extends React.Component {
           <h1>the shoppies</h1>
         </div>
 
-        <div className="container-fluid">    
-          <div className="row content">
-            <div className="col-sm-8 text-left"> 
+        <Container fluid>    
+          <Row content>
+            <Col sm={8}>
               <Search updateSearch={this.updateSearch}/><br/>
               <ResultsContainer searchInput={this.state.searchInput} results={this.state.results} nominateMovie={this.nominateMovie} nominations={this.state.nominations}/> <br/>
-            </div>
-            <div className="col-sm-4 sidenav">
+            </Col>
+            <Col sm={4}>
               <Nominations nominations={this.state.nominations} removeMovie={this.removeMovie}/>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
     
         
       </div>

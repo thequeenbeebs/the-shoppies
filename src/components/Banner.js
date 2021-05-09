@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dialog } from '@material-ui/core';
 import Confetti from 'react-confetti'
+import Modal from 'react-bootstrap/Modal'
 
 function Banner(){
     const [open, setOpen] = useState(true)
@@ -11,10 +12,12 @@ function Banner(){
 
     return(
         
-        <Dialog open={open} onClick={handleClose}> 
+        // <Dialog open={open} onClick={handleClose}> 
+        <Modal show={open} onHide={handleClose}>
             <Confetti />
             <h2 className="banner">Thank you for participating in The Shoppies!</h2>
-        </Dialog>
+        </Modal>
+        // </Dialog>
     )
 }
 

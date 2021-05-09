@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 class Nominations extends React.Component {
     render(){
@@ -6,7 +7,7 @@ class Nominations extends React.Component {
             <div className="container">
                 <h2>Nominations</h2>
                 <ul>
-                    {this.props.nominations.map(movie => <li key={movie['imdbID']}>{movie["Title"]} ({movie["Year"]}) <button className="btn btn-secondary btn-sm" onClick={() => this.props.removeMovie(movie)}>Remove</button></li>)}
+                    {this.props.nominations.map(movie => <li key={movie['imdbID']}>{movie["Title"]} ({movie["Year"]}) <Button variant="secondary" size="sm" onClick={() => this.props.removeMovie(movie)}>Remove</Button></li>)}
                 </ul>
             </div>
         )
